@@ -1,0 +1,123 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Webex_Launcher_Auto.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="attesa" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="materia_1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Materia Non Impostata</Value>
+    </Setting>
+    <Setting Name="materia_2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Materia Non Impostata</Value>
+    </Setting>
+    <Setting Name="materia_3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Materia Non Impostata</Value>
+    </Setting>
+    <Setting Name="materia_4" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Materia Non Impostata</Value>
+    </Setting>
+    <Setting Name="prof_1_1_nome" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Nome Prof Non Impostato</Value>
+    </Setting>
+    <Setting Name="prof_1_1_cognome" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="prof_1_2_nome" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Nome Prof Non Impostato</Value>
+    </Setting>
+    <Setting Name="prof_1_2_cognome" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="prof_1_3_nome" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Nome Prof Non Impostato</Value>
+    </Setting>
+    <Setting Name="prof_1_3_cognome" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="prof_1_4_nome" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Nome Prof Non Impostato</Value>
+    </Setting>
+    <Setting Name="prof_1_4_cognome" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="prof_2_1_nome" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Nome Prof Non Impostato</Value>
+    </Setting>
+    <Setting Name="prof_2_1_cognome" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="prof_2_2_nome" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Nome Prof Non Impostato</Value>
+    </Setting>
+    <Setting Name="prof_2_2_cognome" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="prof_2_3_nome" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Nome Prof Non Impostato</Value>
+    </Setting>
+    <Setting Name="prof_2_3_cognome" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="prof_2_4_nome" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Nome Prof Non Impostato</Value>
+    </Setting>
+    <Setting Name="prof_2_4_cognome" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="prof_3_1_nome" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Nome Prof Non Impostato</Value>
+    </Setting>
+    <Setting Name="prof_3_1_cognome" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="prof_3_2_nome" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Nome Prof Non Impostato</Value>
+    </Setting>
+    <Setting Name="prof_3_2_cognome" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="prof_3_3_nome" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Nome Prof Non Impostato</Value>
+    </Setting>
+    <Setting Name="prof_3_3_cognome" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="prof_3_4_nome" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Nome Prof Non Impostato</Value>
+    </Setting>
+    <Setting Name="prof_3_4_cognome" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="prof_4_1_nome" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Nome Prof Non Impostato</Value>
+    </Setting>
+    <Setting Name="prof_4_1_cognome" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="prof_4_2_nome" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Nome Prof Non Impostato</Value>
+    </Setting>
+    <Setting Name="prof_4_2_cognome" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="prof_4_3_nome" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Nome Prof Non Impostato</Value>
+    </Setting>
+    <Setting Name="prof_4_3_cognome" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="prof_4_4_nome" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Nome Prof Non Impostato</Value>
+    </Setting>
+    <Setting Name="prof_4_4_cognome" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="auto" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="browser" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Chrome</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
