@@ -100,7 +100,7 @@ namespace Webex_Launcher_Auto
                     " altrimenti segui le istruzioni riportate nella wiki, vuoi aprirla?",
                     "Errore", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
                 {
-                    Process.Start("https://github.com");
+                    Process.Start("https://github.com/stignarnia/Webex-Launcher-Auto/wiki/Come-iniziare");
                 }
             }
             Application.Exit();
