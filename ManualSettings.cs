@@ -347,7 +347,7 @@ namespace Webex_Launcher_Auto
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process.Start("https://github.com");
+            Process.Start("https://github.com/stignarnia/Webex-Launcher-Auto/wiki/Regole-di-sintassi");
         }
 
         private void label21_Click(object sender, EventArgs e)
