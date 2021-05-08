@@ -10,7 +10,7 @@ Durante il semestre bisogna entrare sempre nelle stesse stanze, impostale una vo
 
 ## Bug conosciuti  
 * Quando viene importato l'orario, nel caso la materia abbia più di un modulo, il programma tenterà di assegnare gli stessi prof due volte, in quel caso basta premere la X quando hai già risposto alla stessa domanda prima;
-* Quando viene importato l'orario, nel caso si abbia più di un display, il programma probabilmente fallirà, e potrebbe anche chiudere schede di altri programmi (simula la combinazione di tasti `CTRL` + `W`).  Si risolve staccando il secondi display prima di procedere o inserendo prof e materie manualmente.
+* Quando viene importato l'orario, nel caso si abbia più di un display, il programma probabilmente fallirà, e potrebbe anche chiudere schede di altri programmi (simula la combinazione di tasti `CTRL` + `W`).  Si risolve staccando i display aggiuntivi prima di procedere o inserendo prof e materie manualmente.
 
 ## Esempi
 ![image](https://user-images.githubusercontent.com/80171209/117535303-79307800-aff5-11eb-945f-e42621cd3af2.png)
