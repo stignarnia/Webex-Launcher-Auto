@@ -49,7 +49,7 @@ namespace Webex_Launcher_Auto
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process.Start("https://github.com");
+            Process.Start("https://github.com/stignarnia/Webex-Launcher-Auto/wiki/Cosa-sono-i-secondi-di-attesa%3F");
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -79,7 +79,7 @@ namespace Webex_Launcher_Auto
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process.Start("https://github.com");
+            Process.Start("https://github.com/stignarnia/Webex-Launcher-Auto/wiki/Come-funziona-la-rilevazione-automatica-dei-nomi-dei-prof-e-delle-materie%3F");
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
