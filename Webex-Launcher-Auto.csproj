@@ -73,52 +73,52 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SceltaMateria.cs">
+    <Compile Include="Forms\SceltaMateria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SceltaMateria.Designer.cs">
+    <Compile Include="Forms\SceltaMateria.Designer.cs">
       <DependentUpon>SceltaMateria.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManualSettings.cs">
+    <Compile Include="Forms\ManualSettings.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManualSettings.Designer.cs">
+    <Compile Include="Forms\ManualSettings.Designer.cs">
       <DependentUpon>ManualSettings.cs</DependentUpon>
     </Compile>
-    <Compile Include="Home.cs">
+    <Compile Include="Forms\Home.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Home.Designer.cs">
+    <Compile Include="Forms\Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
-    <Compile Include="Materia.cs">
+    <Compile Include="Forms\Materia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Materia.Designer.cs">
+    <Compile Include="Forms\Materia.Designer.cs">
       <DependentUpon>Materia.cs</DependentUpon>
     </Compile>
-    <Compile Include="Settings.cs">
+    <Compile Include="Forms\Settings.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Settings.Designer.cs">
+    <Compile Include="Forms\Settings.Designer.cs">
       <DependentUpon>Settings.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings1.cs" />
-    <EmbeddedResource Include="SceltaMateria.resx">
+    <EmbeddedResource Include="Forms\SceltaMateria.resx">
       <DependentUpon>SceltaMateria.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Home.resx">
+    <EmbeddedResource Include="Forms\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManualSettings.resx">
+    <EmbeddedResource Include="Forms\ManualSettings.resx">
       <DependentUpon>ManualSettings.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Materia.resx">
+    <EmbeddedResource Include="Forms\Materia.resx">
       <DependentUpon>Materia.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Settings.resx">
+    <EmbeddedResource Include="Forms\Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
