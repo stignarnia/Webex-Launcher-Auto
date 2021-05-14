@@ -1,12 +1,12 @@
-﻿using System;
-using System.Windows.Forms;
+﻿using Microsoft.Win32;
+using System;
 using System.Diagnostics;
-using System.Threading;
-using Microsoft.Win32;
 using System.IO;
-using System.Text.RegularExpressions;
 using System.Linq;
-
+using System.Text.RegularExpressions;
+using System.Threading;
+using System.Windows.Forms;
+using Webex_Launcher_Auto.Forms;
 
 namespace Webex_Launcher_Auto
 {
@@ -16,7 +16,7 @@ namespace Webex_Launcher_Auto
         /// Punto di ingresso principale dell'applicazione.
         /// </summary>
         [STAThread]
-        static void Main()
+        private static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
@@ -68,8 +68,6 @@ namespace Webex_Launcher_Auto
         {
             int i, tries;
             string name, surname;
-            IntPtr hWnd = IntPtr.Zero;
-
             tries = Int32.Parse(Properties.Settings.Default["attesa"].ToString()) * 4;
 
             name = Properties.Settings.Default[nome].ToString();
@@ -109,7 +107,7 @@ namespace Webex_Launcher_Auto
         public static void Sync()
         {
             int i, j;
-            string[] subs, subs2, materie = new string[4], nomi = new string[4*4], cognomi = new string[4*4];
+            string[] subs, subs2, materie = new string[4], nomi = new string[4 * 4], cognomi = new string[4 * 4];
             string pattern, materia;
             SceltaMateria SelezioneMateria;
 
