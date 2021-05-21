@@ -25,7 +25,7 @@ namespace Webex_Launcher_Auto.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("5")]
+        [global::System.Configuration.DefaultSettingValueAttribute("10")]
         public int attesa {
             get {
                 return ((int)(this["attesa"]));

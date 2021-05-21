@@ -125,11 +125,15 @@ namespace Webex_Launcher_Auto.Forms
 
         private void Sync_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Aprirò i servizi online, accedi, entra nell'orario e seleziona il semestre che ti interessa, " +
+            if (MessageBox.Show("Aprirò i servizi online, accedi e, se richiesto, seleziona il semestre che ti interessa, " +
                 "a quel punto proverò a estrarre le informazioni necessarie e chiuderò la pagina",
                 "Info", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
             {
-                Program.Sync();
+                if (!Program.Sync())
+                {
+                    MessageBox.Show("Non sono riuscito a estrarre l'orario, probabilmente ci hai messo più di due minuti ad " +
+                        "accedere o hai chiuso la pagina", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             Form1_Load(null, EventArgs.Empty);
         }
