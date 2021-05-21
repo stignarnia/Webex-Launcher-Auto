@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Diagnostics;
 using System.Threading;
 using System.Windows.Forms;
@@ -46,7 +46,7 @@ namespace Webex_Launcher_Auto.Forms
                 }
             }
 
-            if (!Program.IsBrowserInstalled())
+            if (Program.IsBrowserInstalled() == "")
             {
                 if (MessageBox.Show("Il browser selezionato non è installato, cambialo nelle impostazioni",
                                 "Errore", MessageBoxButtons.OKCancel, MessageBoxIcon.Error) == DialogResult.Cancel)
