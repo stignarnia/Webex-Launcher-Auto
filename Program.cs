@@ -1,4 +1,4 @@
-﻿using Microsoft.Win32;
+using Microsoft.Win32;
 using System;
 using System.Diagnostics;
 using System.IO;
@@ -32,7 +32,7 @@ namespace Webex_Launcher_Auto
             }
         }
 
-        public static bool IsBrowserInstalled()
+        public static string IsBrowserInstalled()
         {
             string exePath;
             RegistryKey key;
@@ -43,13 +43,14 @@ namespace Webex_Launcher_Auto
             {
                 RegistryKey subkey = key.OpenSubKey(keyName);
                 exePath = subkey.GetValue("InstallLocation") as string;
-                if (File.Exists(exePath + @"\" + Properties.Settings.Default["browser"].ToString().ToLower() + ".exe"))
+                if (File.Exists(exePath + @"\" + Webex_Launcher_Auto.Properties.Settings.Default["browser"].ToString().ToLower() + ".exe"))
                 {
-                    return true;
+                    string path = exePath + @"\" + Webex_Launcher_Auto.Properties.Settings.Default["browser"].ToString().ToLower() + ".exe";
+                    return path;
                 }
             }
             // NOT FOUND
-            return false;
+            return "";
         }
 
         public static bool Is_Webex_Open()
