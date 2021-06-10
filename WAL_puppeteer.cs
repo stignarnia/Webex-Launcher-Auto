@@ -1,8 +1,8 @@
 using System;
 using System.IO;
 using System.Threading.Tasks;
-using PuppeteerSharp;
 using Webex_Launcher_Auto;
+using PuppeteerSharp;
 
 namespace WAL_puppeteer
 {
@@ -36,7 +36,8 @@ namespace WAL_puppeteer
                     await page.WaitForSelectorAsync("#testuale");
                     string html = await page.GetContentAsync();
                     File.WriteAllText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\schedule.html", html);
-                } catch
+                }
+                catch
                 {
                     ;
                 }

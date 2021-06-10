@@ -5,9 +5,9 @@ using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using Webex_Launcher_Auto.Forms;
-using System.Threading.Tasks;
 
 namespace Webex_Launcher_Auto
 {
@@ -15,6 +15,7 @@ namespace Webex_Launcher_Auto
     {
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         private static extern bool SetProcessDPIAware();
+
         /// <summary>
         /// Punto di ingresso principale dell'applicazione.
         /// </summary>
@@ -128,7 +129,8 @@ namespace Webex_Launcher_Auto
             {
                 source = File.ReadAllText(path);
                 File.Delete(path);
-            } else
+            }
+            else
             {
                 return false;
             }
