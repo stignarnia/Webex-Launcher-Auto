@@ -5,7 +5,7 @@
 Durante il semestre bisogna entrare sempre nelle stesse stanze, impostale una volta e poi entraci con un click
 
 ## Utilizzo
-* Scarica il programma (`.exe`, infatti funziona solo per Windows) dalla pagina [**releases**](https://github.com/stignarnia/Webex-Launcher-Auto/releases)
+* Scarica il programma (estraendo la cartella compressa ed aprendo il `.exe`, infatti funziona solo per Windows) dalla pagina [**releases**](https://github.com/stignarnia/Webex-Launcher-Auto/releases)
 * Dai un'occhiata alla [**wiki**](https://github.com/stignarnia/Webex-Launcher-Auto/wiki), troverai anche le istruzioni per compilare il programma in autonomia
 
 ## Bug conosciuti  
