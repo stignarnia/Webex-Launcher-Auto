@@ -7,11 +7,9 @@ Durante il semestre bisogna entrare sempre nelle stesse stanze, impostale una vo
 ## Utilizzo
 * Scarica il programma (`.exe`, infatti funziona solo per Windows) dalla pagina [**releases**](https://github.com/stignarnia/Webex-Launcher-Auto/releases)
 * Dai un'occhiata alla [**wiki**](https://github.com/stignarnia/Webex-Launcher-Auto/wiki), troverai anche le istruzioni per compilare il programma in autonomia
-* Se vuoi [prova la beta](https://github.com/stignarnia/Webex-Launcher-Auto/tree/beta), che risolve il secondo dei bug qui sotto (non simula più la pressione di tasti) e si scala meglio sugli schermi ad alta definizione
 
 ## Bug conosciuti  
-* Quando viene importato l'orario, nel caso la materia abbia più di un modulo, il programma tenterà di assegnare gli stessi prof due volte, in quel caso basta premere la X quando hai già risposto alla stessa domanda prima;
-* Quando viene importato l'orario, nel caso si abbia più di un display, il programma probabilmente fallirà, e potrebbe anche chiudere schede di altri programmi (simula la combinazione di tasti `CTRL` + `W`).  Si risolve staccando i display aggiuntivi prima di procedere o inserendo prof e materie manualmente.
+* Quando viene importato l'orario, nel caso la materia abbia più di un modulo, il programma tenterà di assegnare gli stessi prof due volte, in quel caso basta premere la X quando hai già risposto alla stessa domanda prima. 
 
 ## Esempi
 ![image](https://user-images.githubusercontent.com/80171209/117535303-79307800-aff5-11eb-945f-e42621cd3af2.png)
