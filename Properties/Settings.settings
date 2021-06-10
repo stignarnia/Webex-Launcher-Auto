@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="attesa" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">5</Value>
+      <Value Profile="(Default)">10</Value>
     </Setting>
     <Setting Name="materia_1" Type="System.String" Scope="User">
       <Value Profile="(Default)">Materia Non Impostata</Value>
