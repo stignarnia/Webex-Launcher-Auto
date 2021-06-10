@@ -1,10 +1,11 @@
-﻿using Microsoft.Win32;
+using Microsoft.Win32;
 using System;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using Webex_Launcher_Auto.Forms;
 
@@ -12,18 +13,27 @@ namespace Webex_Launcher_Auto
 {
     public partial class Program
     {
+        [System.Runtime.InteropServices.DllImport("user32.dll")]
+        private static extern bool SetProcessDPIAware();
+
         /// <summary>
         /// Punto di ingresso principale dell'applicazione.
         /// </summary>
         [STAThread]
         private static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Home());
+            {
+                if (Environment.OSVersion.Version.Major >= 6)
+                {
+                    SetProcessDPIAware();
+                }
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new Home());
+            }
         }
 
-        public static bool IsBrowserInstalled()
+        public static string IsBrowserInstalled()
         {
             string exePath;
             RegistryKey key;
@@ -34,13 +44,14 @@ namespace Webex_Launcher_Auto
             {
                 RegistryKey subkey = key.OpenSubKey(keyName);
                 exePath = subkey.GetValue("InstallLocation") as string;
-                if (File.Exists(exePath + @"\" + Properties.Settings.Default["browser"].ToString().ToLower() + ".exe"))
+                if (File.Exists(exePath + @"\" + Webex_Launcher_Auto.Properties.Settings.Default["browser"].ToString().ToLower() + ".exe"))
                 {
-                    return true;
+                    string path = exePath + @"\" + Webex_Launcher_Auto.Properties.Settings.Default["browser"].ToString().ToLower() + ".exe";
+                    return path;
                 }
             }
             // NOT FOUND
-            return false;
+            return "";
         }
 
         public static bool Is_Webex_Open()
@@ -78,13 +89,13 @@ namespace Webex_Launcher_Auto
             {
                 if (Is_Webex_Open())
                 {
-                    SendKeys.Send("%{Tab}");
+                    SendKeys.SendWait("%{Tab}");
                     Thread.Sleep(500);
-                    SendKeys.Send("^(w)");
+                    SendKeys.SendWait("^(w)");
                     Thread.Sleep(500);
                     if (Process.GetProcessesByName(Properties.Settings.Default["browser"].ToString()).Length != 0)
                     {
-                        SendKeys.Send("%{Tab}");
+                        SendKeys.SendWait("%{Tab}");
                     }
                     break;
                 }
@@ -104,37 +115,25 @@ namespace Webex_Launcher_Auto
             Application.Exit();
         }
 
-        public static void Sync()
+        public static bool Sync()
         {
             int i, j;
             string[] subs, subs2, materie = new string[4], nomi = new string[4 * 4], cognomi = new string[4 * 4];
-            string pattern, materia;
+            string pattern, materia, source, path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\schedule.html";
             SceltaMateria SelezioneMateria;
 
-            Process.Start(Properties.Settings.Default["browser"].ToString() + ".exe", "https://servizionline.polimi.it/portaleservizi/");
-            Thread.Sleep(500);
-            SendKeys.Send("%{Tab}");
+            Task task = Task.Run(async () => await WAL_puppeteer.WAL_puppeteer.DownloadSchedule());
+            task.Wait();
 
-            if (MessageBox.Show("Premi ok quando sei sulla pagina giusta",
-                    "Sono pronto", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
+            if (File.Exists(path))
             {
-                Thread.Sleep(500);
-                SendKeys.Send("%{Tab}");
-                Thread.Sleep(500);
-                SendKeys.Send("^(u)");
-                Thread.Sleep(500);
-                SendKeys.Send("^(a)");
-                Thread.Sleep(500);
-                SendKeys.Send("^(c)");
-                Thread.Sleep(500);
-                SendKeys.Send("^(w)");
-                Thread.Sleep(500);
-                SendKeys.Send("^(w)");
-                Thread.Sleep(500);
-                SendKeys.Send("%{Tab}");
+                source = File.ReadAllText(path);
+                File.Delete(path);
             }
-
-            string source = Clipboard.GetText();
+            else
+            {
+                return false;
+            }
             pattern = "[0-9][0-9][0-9][0-9][0-9][0-9]( - )+";
             subs = Regex.Split(source, pattern);
             Array.Reverse(subs);
@@ -143,7 +142,7 @@ namespace Webex_Launcher_Auto
             for (i = 0; i < subs.Length && j < 4; i++)
             {
                 subs2 = Regex.Split(subs[i], pattern);
-                if (!subs2[0].Contains("-") && subs2[0] != "" && subs2[0] != " " && !materie.Contains(subs2[0].Replace("</b>", "")))
+                if (!subs2[0].Contains("-") && subs2[0] != "" && subs2[0] != " " && subs2[0] != "<!DOCTYPE" && !materie.Contains(subs2[0].Replace("</b>", "")))
                 {
                     materie[j] = subs2[0];
                     materia = "materia_" + (j + 1).ToString();
@@ -189,6 +188,7 @@ namespace Webex_Launcher_Auto
             }
 
             Properties.Settings.Default.Save();
+            return true;
         }
     }
 }
