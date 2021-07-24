@@ -62,7 +62,7 @@ namespace Webex_Launcher_Auto.Forms
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(150, 166);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(234, 32);
+            this.label1.Size = new System.Drawing.Size(233, 32);
             this.label1.TabIndex = 3;
             this.label1.Text = "Secondi di attesa";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -72,7 +72,7 @@ namespace Webex_Launcher_Auto.Forms
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Location = new System.Drawing.Point(1130, 166);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(102, 32);
+            this.linkLabel1.Size = new System.Drawing.Size(101, 32);
             this.linkLabel1.TabIndex = 4;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Cos\'è?";
@@ -83,14 +83,14 @@ namespace Webex_Launcher_Auto.Forms
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(991, 166);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 32);
+            this.label2.Size = new System.Drawing.Size(30, 32);
             this.label2.TabIndex = 5;
             this.label2.Text = "1";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // save
             // 
-            this.save.Location = new System.Drawing.Point(734, 642);
+            this.save.Location = new System.Drawing.Point(741, 537);
             this.save.Name = "save";
             this.save.Size = new System.Drawing.Size(611, 119);
             this.save.TabIndex = 7;
@@ -100,7 +100,7 @@ namespace Webex_Launcher_Auto.Forms
             // 
             // nosave
             // 
-            this.nosave.Location = new System.Drawing.Point(57, 642);
+            this.nosave.Location = new System.Drawing.Point(64, 537);
             this.nosave.Name = "nosave";
             this.nosave.Size = new System.Drawing.Size(611, 119);
             this.nosave.TabIndex = 8;
@@ -111,9 +111,9 @@ namespace Webex_Launcher_Auto.Forms
             // linkLabel2
             // 
             this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(1103, 304);
+            this.linkLabel2.Location = new System.Drawing.Point(1094, 258);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(162, 32);
+            this.linkLabel2.Size = new System.Drawing.Size(161, 32);
             this.linkLabel2.TabIndex = 9;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Come fare?";
@@ -126,16 +126,16 @@ namespace Webex_Launcher_Auto.Forms
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox1.Location = new System.Drawing.Point(157, 254);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(781, 132);
+            this.checkBox1.Size = new System.Drawing.Size(615, 36);
             this.checkBox1.TabIndex = 11;
-            this.checkBox1.Text = resources.GetString("checkBox1.Text");
+            this.checkBox1.Text = "Rileva automaticamente materie e professori";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // manualInsert
             // 
             this.manualInsert.Enabled = false;
-            this.manualInsert.Location = new System.Drawing.Point(402, 413);
+            this.manualInsert.Location = new System.Drawing.Point(439, 331);
             this.manualInsert.Name = "manualInsert";
             this.manualInsert.Size = new System.Drawing.Size(545, 61);
             this.manualInsert.TabIndex = 12;
@@ -152,7 +152,7 @@ namespace Webex_Launcher_Auto.Forms
             "Firefox",
             "Opera",
             "Brave"});
-            this.comboBox1.Location = new System.Drawing.Point(402, 508);
+            this.comboBox1.Location = new System.Drawing.Point(439, 426);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(545, 39);
             this.comboBox1.TabIndex = 13;
@@ -161,9 +161,9 @@ namespace Webex_Launcher_Auto.Forms
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(157, 508);
+            this.label4.Location = new System.Drawing.Point(194, 426);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(118, 32);
+            this.label4.Size = new System.Drawing.Size(117, 32);
             this.label4.TabIndex = 14;
             this.label4.Text = "Browser";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -182,7 +182,7 @@ namespace Webex_Launcher_Auto.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(240F, 240F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1395, 808);
+            this.ClientSize = new System.Drawing.Size(1395, 699);
             this.Controls.Add(this.SetToDefault);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.comboBox1);
