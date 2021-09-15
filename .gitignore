@@ -6,3 +6,7 @@ obj/
 bin/
 
 packages/
+
+/Setup/Release
+
+/Setup/Debug

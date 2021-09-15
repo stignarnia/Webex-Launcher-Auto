@@ -69,16 +69,20 @@ namespace Webex_Launcher_Auto.Forms
                 }
                 else
                 {
-                    Process[] procs2 = Process.GetProcessesByName("ciscowebexstart");
-                    foreach (Process p in procs2)
+                    try
                     {
-                        p.Kill();
+                        Process[] procs2 = Process.GetProcessesByName("ciscowebexstart");
+                        foreach (Process p in procs2)
+                        {
+                            p.Kill();
+                        }
+                        foreach (Process p in procs)
+                        {
+                            p.Kill();
+                            Thread.Sleep(250);
+                        }
                     }
-                    foreach (Process p in procs)
-                    {
-                        p.Kill();
-                        Thread.Sleep(250);
-                    }
+                    catch { }
                 }
             }
         }
