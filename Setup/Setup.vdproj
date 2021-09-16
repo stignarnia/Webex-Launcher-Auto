@@ -3243,7 +3243,7 @@
             "SharedLegacy" = "11:FALSE"
             "PackageAs" = "3:1"
             "Register" = "3:1"
-            "Exclude" = "11:FALSE"
+            "Exclude" = "11:TRUE"
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
@@ -3336,7 +3336,7 @@
             "SharedLegacy" = "11:FALSE"
             "PackageAs" = "3:1"
             "Register" = "3:1"
-            "Exclude" = "11:FALSE"
+            "Exclude" = "11:TRUE"
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
@@ -3522,7 +3522,7 @@
             "SharedLegacy" = "11:FALSE"
             "PackageAs" = "3:1"
             "Register" = "3:1"
-            "Exclude" = "11:FALSE"
+            "Exclude" = "11:TRUE"
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
@@ -5661,7 +5661,7 @@
             "SharedLegacy" = "11:FALSE"
             "PackageAs" = "3:1"
             "Register" = "3:1"
-            "Exclude" = "11:FALSE"
+            "Exclude" = "11:TRUE"
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
@@ -5753,7 +5753,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Webex Launcher"
         "ProductCode" = "8:{091EED6D-ED36-4861-A398-CBFA5A3C69D5}"
-        "PackageCode" = "8:{7A430ECD-C2C1-4BA1-AE32-975F0B568833}"
+        "PackageCode" = "8:{A25DAED3-3444-4BB2-A89F-D35C69E71494}"
         "UpgradeCode" = "8:{F5834D50-17BB-4821-976D-E8FDA9E565B2}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
