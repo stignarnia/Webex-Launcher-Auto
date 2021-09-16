@@ -481,7 +481,7 @@ namespace Webex_Launcher_Auto.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Chrome")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Edge")]
         public string browser {
             get {
                 return ((string)(this["browser"]));

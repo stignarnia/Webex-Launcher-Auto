@@ -1,5 +1,4 @@
-﻿
-namespace Webex_Launcher_Auto.Forms
+﻿namespace Webex_Launcher_Auto.Forms
 {
     partial class Home
     {
@@ -35,7 +34,7 @@ namespace Webex_Launcher_Auto.Forms
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.Sync = new System.Windows.Forms.Button();
-            this.Impostazioni = new System.Windows.Forms.Button();
+            this.Settings = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -94,15 +93,15 @@ namespace Webex_Launcher_Auto.Forms
             this.Sync.Visible = false;
             this.Sync.Click += new System.EventHandler(this.Sync_Click);
             // 
-            // Impostazioni
+            // Settings
             // 
-            this.Impostazioni.Location = new System.Drawing.Point(1059, 703);
-            this.Impostazioni.Name = "Impostazioni";
-            this.Impostazioni.Size = new System.Drawing.Size(414, 60);
-            this.Impostazioni.TabIndex = 4;
-            this.Impostazioni.Text = "Impostazioni";
-            this.Impostazioni.UseVisualStyleBackColor = true;
-            this.Impostazioni.Click += new System.EventHandler(this.Settings_Click);
+            this.Settings.Location = new System.Drawing.Point(1059, 703);
+            this.Settings.Name = "Settings";
+            this.Settings.Size = new System.Drawing.Size(414, 60);
+            this.Settings.TabIndex = 4;
+            this.Settings.Text = "Impostazioni";
+            this.Settings.UseVisualStyleBackColor = true;
+            this.Settings.Click += new System.EventHandler(this.Settings_Click);
             // 
             // Home
             // 
@@ -110,7 +109,7 @@ namespace Webex_Launcher_Auto.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1528, 853);
-            this.Controls.Add(this.Impostazioni);
+            this.Controls.Add(this.Settings);
             this.Controls.Add(this.Sync);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -134,6 +133,6 @@ namespace Webex_Launcher_Auto.Forms
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button Sync;
-        private System.Windows.Forms.Button Impostazioni;
+        private System.Windows.Forms.Button Settings;
     }
 }

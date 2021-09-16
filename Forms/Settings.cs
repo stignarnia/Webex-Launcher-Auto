@@ -114,7 +114,7 @@ namespace Webex_Launcher_Auto.Forms
             trackBar1.Value = 5;
             checkBox1.Checked = false;
             manualInsert.Enabled = true;
-            comboBox1.SelectedItem = "Chrome";
+            comboBox1.SelectedItem = "Edge";
         }
 
         private void label4_Click(object sender, EventArgs e)

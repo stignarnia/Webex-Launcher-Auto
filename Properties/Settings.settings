@@ -117,7 +117,7 @@
       <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="browser" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Chrome</Value>
+      <Value Profile="(Default)">Edge</Value>
     </Setting>
   </Settings>
 </SettingsFile>

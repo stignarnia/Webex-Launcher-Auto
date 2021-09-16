@@ -91,9 +91,9 @@ namespace Webex_Launcher_Auto.Forms
         {
             if (button1.Text != "Materia Non Impostata")
             {
-                Subject ProfSelection;
-                ProfSelection = new Subject(1);
-                ProfSelection.ShowDialog();
+                Subject SelezioneProf;
+                SelezioneProf = new Subject(1);
+                SelezioneProf.ShowDialog();
             }
         }
 
@@ -101,9 +101,9 @@ namespace Webex_Launcher_Auto.Forms
         {
             if (button2.Text != "Materia Non Impostata")
             {
-                Subject ProfSelection;
-                ProfSelection = new Subject(2);
-                ProfSelection.ShowDialog();
+                Subject SelezioneProf;
+                SelezioneProf = new Subject(2);
+                SelezioneProf.ShowDialog();
             }
         }
 
@@ -111,9 +111,9 @@ namespace Webex_Launcher_Auto.Forms
         {
             if (button3.Text != "Materia Non Impostata")
             {
-                Subject ProfSelection;
-                ProfSelection = new Subject(3);
-                ProfSelection.ShowDialog();
+                Subject SelezioneProf;
+                SelezioneProf = new Subject(3);
+                SelezioneProf.ShowDialog();
             }
         }
 
@@ -121,9 +121,9 @@ namespace Webex_Launcher_Auto.Forms
         {
             if (button4.Text != "Materia Non Impostata")
             {
-                Subject ProfSelection;
-                ProfSelection = new Subject(4);
-                ProfSelection.ShowDialog();
+                Subject SelezioneProf;
+                SelezioneProf = new Subject(4);
+                SelezioneProf.ShowDialog();
             }
         }
 
@@ -144,9 +144,9 @@ namespace Webex_Launcher_Auto.Forms
 
         private void Settings_Click(object sender, EventArgs e)
         {
-            Settings Settings;
-            Settings = new Settings();
-            Settings.ShowDialog();
+            Settings Impostazioni;
+            Impostazioni = new Settings();
+            Impostazioni.ShowDialog();
             if (bool.Parse(Properties.Settings.Default["auto"].ToString()) && bool.Parse(Properties.Settings.Default["auto"].ToString()) != Sync.Enabled)
             {
                 Sync_Click(null, EventArgs.Empty);

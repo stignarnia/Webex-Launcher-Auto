@@ -147,8 +147,8 @@ namespace Webex_Launcher_Auto.Forms
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Chrome",
             "Edge",
+            "Chrome",
             "Firefox",
             "Opera",
             "Brave"});
