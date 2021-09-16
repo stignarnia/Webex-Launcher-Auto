@@ -29,6 +29,7 @@ namespace Webex_Launcher_Auto
                 }
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
+                Updater.Updater.CheckForUpdates();
                 Application.Run(new Home());
             }
         }
