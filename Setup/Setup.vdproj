@@ -5753,7 +5753,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Webex Launcher"
         "ProductCode" = "8:{A5EC570B-E9EA-4100-9574-BF9EC9F48F72}"
-        "PackageCode" = "8:{045AABF8-A8C6-4496-9994-737B1FBFDC66}"
+        "PackageCode" = "8:{F209A654-4574-41D5-B7EB-630402224474}"
         "UpgradeCode" = "8:{F5834D50-17BB-4821-976D-E8FDA9E565B2}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
