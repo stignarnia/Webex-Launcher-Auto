@@ -18,7 +18,8 @@ namespace Updater
             try
             {
                 string latest = webClient.DownloadString("https://github.com/stignarnia/webex-launcher-auto/releases/latest/");
-                if (!latest.Contains(version))
+                System.IO.File.WriteAllText(@"C:\users\diego\desktop\test.txt", latest);
+                if (!latest.Contains("/tree/v" + version))
                 {
                     if (MessageBox.Show("È disponibile un nuovo aggiornamento, vuoi installarlo adesso?",
                         "Aggiornamento disponibile", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
