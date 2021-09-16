@@ -13,7 +13,7 @@ namespace Webex_Launcher_Auto.Forms
             CenterToScreen();
         }
 
-        public void Form1_Load(object sender, EventArgs e)
+        public void Home_Load(object sender, EventArgs e)
         {
             if (bool.Parse(Properties.Settings.Default["auto"].ToString()))
             {
@@ -42,7 +42,7 @@ namespace Webex_Launcher_Auto.Forms
                 else
                 {
                     Sync.Enabled = false;
-                    Impostazioni_Click(null, EventArgs.Empty);
+                    Settings_Click(null, EventArgs.Empty);
                 }
             }
 
@@ -55,7 +55,7 @@ namespace Webex_Launcher_Auto.Forms
                 }
                 else
                 {
-                    Impostazioni_Click(null, EventArgs.Empty);
+                    Settings_Click(null, EventArgs.Empty);
                 }
             }
 
@@ -91,9 +91,9 @@ namespace Webex_Launcher_Auto.Forms
         {
             if (button1.Text != "Materia Non Impostata")
             {
-                Subject SelezioneProf;
-                SelezioneProf = new Subject(1);
-                SelezioneProf.ShowDialog();
+                Subject ProfSelection;
+                ProfSelection = new Subject(1);
+                ProfSelection.ShowDialog();
             }
         }
 
@@ -101,9 +101,9 @@ namespace Webex_Launcher_Auto.Forms
         {
             if (button2.Text != "Materia Non Impostata")
             {
-                Subject SelezioneProf;
-                SelezioneProf = new Subject(2);
-                SelezioneProf.ShowDialog();
+                Subject ProfSelection;
+                ProfSelection = new Subject(2);
+                ProfSelection.ShowDialog();
             }
         }
 
@@ -111,9 +111,9 @@ namespace Webex_Launcher_Auto.Forms
         {
             if (button3.Text != "Materia Non Impostata")
             {
-                Subject SelezioneProf;
-                SelezioneProf = new Subject(3);
-                SelezioneProf.ShowDialog();
+                Subject ProfSelection;
+                ProfSelection = new Subject(3);
+                ProfSelection.ShowDialog();
             }
         }
 
@@ -121,9 +121,9 @@ namespace Webex_Launcher_Auto.Forms
         {
             if (button4.Text != "Materia Non Impostata")
             {
-                Subject SelezioneProf;
-                SelezioneProf = new Subject(4);
-                SelezioneProf.ShowDialog();
+                Subject ProfSelection;
+                ProfSelection = new Subject(4);
+                ProfSelection.ShowDialog();
             }
         }
 
@@ -139,21 +139,21 @@ namespace Webex_Launcher_Auto.Forms
                         "accedere o hai chiuso la pagina", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            Form1_Load(null, EventArgs.Empty);
+            Home_Load(null, EventArgs.Empty);
         }
 
-        private void Impostazioni_Click(object sender, EventArgs e)
+        private void Settings_Click(object sender, EventArgs e)
         {
-            Settings Impostazioni;
-            Impostazioni = new Settings();
-            Impostazioni.ShowDialog();
+            Settings Settings;
+            Settings = new Settings();
+            Settings.ShowDialog();
             if (bool.Parse(Properties.Settings.Default["auto"].ToString()) && bool.Parse(Properties.Settings.Default["auto"].ToString()) != Sync.Enabled)
             {
                 Sync_Click(null, EventArgs.Empty);
             }
             else
             {
-                Form1_Load(null, EventArgs.Empty);
+                Home_Load(null, EventArgs.Empty);
             }
         }
     }

@@ -102,7 +102,7 @@ namespace Webex_Launcher_Auto.Forms
             this.Impostazioni.TabIndex = 4;
             this.Impostazioni.Text = "Impostazioni";
             this.Impostazioni.UseVisualStyleBackColor = true;
-            this.Impostazioni.Click += new System.EventHandler(this.Impostazioni_Click);
+            this.Impostazioni.Click += new System.EventHandler(this.Settings_Click);
             // 
             // Home
             // 
@@ -121,7 +121,7 @@ namespace Webex_Launcher_Auto.Forms
             this.MaximizeBox = false;
             this.Name = "Home";
             this.Text = "Webex Launcher";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.Home_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -137,4 +137,3 @@ namespace Webex_Launcher_Auto.Forms
         private System.Windows.Forms.Button Impostazioni;
     }
 }
-

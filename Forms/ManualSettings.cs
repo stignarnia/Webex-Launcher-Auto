@@ -30,9 +30,9 @@ namespace Webex_Launcher_Auto.Forms
                     if (k != (j - 1) * 5)
                     {
                         TextBox textbox = (TextBox)Controls.Find(string.Format("textBox{0}", k), false).FirstOrDefault();
-                        string nome = "prof_" + j.ToString() + "_" + i.ToString() + "_nome";
-                        string cognome = "prof_" + j.ToString() + "_" + i.ToString() + "_cognome";
-                        textbox.Text = Properties.Settings.Default[nome].ToString() + " " + Properties.Settings.Default[cognome].ToString();
+                        string name = "prof_" + j.ToString() + "_" + i.ToString() + "_nome";
+                        string surname = "prof_" + j.ToString() + "_" + i.ToString() + "_cognome";
+                        textbox.Text = Properties.Settings.Default[name].ToString() + " " + Properties.Settings.Default[surname].ToString();
                     }
                     else
                     {
@@ -69,8 +69,8 @@ namespace Webex_Launcher_Auto.Forms
 
         private void Save_Click(object sender, EventArgs e)
         {
-            int i, j, k, profImpostati;
-            string materia, nome, cognome;
+            int i, j, k, SelectedProf;
+            string subject, name, surname;
             TextBox textbox;
 
             k = 1;
@@ -83,8 +83,8 @@ namespace Webex_Launcher_Auto.Forms
                     {
                         textbox.Text = "Materia Non Impostata";
                     }
-                    materia = "materia_" + k.ToString();
-                    Properties.Settings.Default[materia] = textbox.Text;
+                    subject = "materia_" + k.ToString();
+                    Properties.Settings.Default[subject] = textbox.Text;
                     k++;
                 }
             }
@@ -97,26 +97,26 @@ namespace Webex_Launcher_Auto.Forms
                     if (k != (j - 1) * 5)
                     {
                         textbox = (TextBox)Controls.Find(string.Format("textBox{0}", k), false).FirstOrDefault();
-                        nome = "prof_" + j.ToString() + "_" + i.ToString() + "_nome";
-                        cognome = "prof_" + j.ToString() + "_" + i.ToString() + "_cognome";
-                        string[] NomeCognome = textbox.Text.Split(' ');
+                        name = "prof_" + j.ToString() + "_" + i.ToString() + "_nome";
+                        surname = "prof_" + j.ToString() + "_" + i.ToString() + "_cognome";
+                        string[] NameSurname = textbox.Text.Split(' ');
                         if (textbox.Text.Contains("Nome Prof Non Impostato") || textbox.Text == "")
                         {
-                            Properties.Settings.Default[nome] = "Nome Prof Non Impostato";
-                            Properties.Settings.Default[cognome] = "";
+                            Properties.Settings.Default[name] = "Nome Prof Non Impostato";
+                            Properties.Settings.Default[surname] = "";
                         }
-                        else if (NomeCognome.Length == 2)
+                        else if (NameSurname.Length == 2)
                         {
-                            materia = "materia_" + j.ToString();
-                            if (Properties.Settings.Default[materia].ToString() == "Materia Non Impostata")
+                            subject = "materia_" + j.ToString();
+                            if (Properties.Settings.Default[subject].ToString() == "Materia Non Impostata")
                             {
-                                MessageBox.Show(NomeCognome[0] + " " + NomeCognome[1] + " si riferisce a una materia non impostata. " +
+                                MessageBox.Show(NameSurname[0] + " " + NameSurname[1] + " si riferisce a una materia non impostata. " +
                                 "Il nominativo in questione non verrà salvato", "Attenzione", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             }
                             else
                             {
-                                Properties.Settings.Default[nome] = NomeCognome[0];
-                                Properties.Settings.Default[cognome] = NomeCognome[1];
+                                Properties.Settings.Default[name] = NameSurname[0];
+                                Properties.Settings.Default[surname] = NameSurname[1];
                             }
                         }
                         else
@@ -136,21 +136,21 @@ namespace Webex_Launcher_Auto.Forms
 
             for (j = 1; j <= 4; j++)
             {
-                materia = "materia_" + j.ToString();
-                if (Properties.Settings.Default[materia].ToString() != "Materia Non Impostata")
+                subject = "materia_" + j.ToString();
+                if (Properties.Settings.Default[subject].ToString() != "Materia Non Impostata")
                 {
-                    profImpostati = 4;
+                    SelectedProf = 4;
                     for (i = 1; i <= 4; i++)
                     {
-                        nome = "prof_" + j.ToString() + "_" + i.ToString() + "_nome";
-                        if (Properties.Settings.Default[nome].ToString() == "Nome Prof Non Impostato")
+                        name = "prof_" + j.ToString() + "_" + i.ToString() + "_nome";
+                        if (Properties.Settings.Default[name].ToString() == "Nome Prof Non Impostato")
                         {
-                            profImpostati--;
+                            SelectedProf--;
                         }
                     }
-                    if (profImpostati == 0)
+                    if (SelectedProf == 0)
                     {
-                        Properties.Settings.Default[materia] = "Materia Non Impostata";
+                        Properties.Settings.Default[subject] = "Materia Non Impostata";
                         MessageBox.Show("La materia " + j.ToString() + " non ha prof impostati. " +
                             "La materia in questione non verrà salvata", "Attenzione", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }

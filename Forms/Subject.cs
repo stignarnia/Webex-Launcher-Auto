@@ -6,64 +6,64 @@ namespace Webex_Launcher_Auto.Forms
 {
     public partial class Subject : Form
     {
-        public int id_materia;
+        public int subject_id;
 
-        public Subject(int materia)
+        public Subject(int subject)
         {
             InitializeComponent();
             CenterToScreen();
-            id_materia = materia;
+            subject_id = subject;
         }
 
-        public void Form2_Load(object sender, EventArgs e)
+        public void Subject_Load(object sender, EventArgs e)
         {
             int j;
             for (j = 1; j <= 4; j++)
             {
                 Button button = (Button)Controls.Find(string.Format("button{0}", j), false).FirstOrDefault();
-                string nome = "prof_" + id_materia.ToString() + "_" + j.ToString() + "_nome";
-                string cognome = "prof_" + id_materia.ToString() + "_" + j.ToString() + "_cognome";
-                button.Text = Properties.Settings.Default[nome].ToString() + " " + Properties.Settings.Default[cognome].ToString();
+                string name = "prof_" + subject_id.ToString() + "_" + j.ToString() + "_nome";
+                string surname = "prof_" + subject_id.ToString() + "_" + j.ToString() + "_cognome";
+                button.Text = Properties.Settings.Default[name].ToString() + " " + Properties.Settings.Default[surname].ToString();
             }
         }
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            if (button1.Text != "Nome Prof Non Impostato ")
+            if (button1.Text != "name Prof Non Impostato ")
             {
-                string nome = "prof_" + id_materia.ToString() + "_1_nome";
-                string cognome = "prof_" + id_materia.ToString() + "_1_cognome";
-                Program.Subject_Button_Common(nome, cognome);
+                string name = "prof_" + subject_id.ToString() + "_1_nome";
+                string surname = "prof_" + subject_id.ToString() + "_1_cognome";
+                Program.Subject_Button_Common(name, surname);
             }
         }
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            if (button2.Text != "Nome Prof Non Impostato ")
+            if (button2.Text != "name Prof Non Impostato ")
             {
-                string nome = "prof_" + id_materia.ToString() + "_2_nome";
-                string cognome = "prof_" + id_materia.ToString() + "_2_cognome";
-                Program.Subject_Button_Common(nome, cognome);
+                string name = "prof_" + subject_id.ToString() + "_2_nome";
+                string surname = "prof_" + subject_id.ToString() + "_2_cognome";
+                Program.Subject_Button_Common(name, surname);
             }
         }
 
         private void Button3_Click(object sender, EventArgs e)
         {
-            if (button3.Text != "Nome Prof Non Impostato ")
+            if (button3.Text != "name Prof Non Impostato ")
             {
-                string nome = "prof_" + id_materia.ToString() + "_3_nome";
-                string cognome = "prof_" + id_materia.ToString() + "_3_cognome";
-                Program.Subject_Button_Common(nome, cognome);
+                string name = "prof_" + subject_id.ToString() + "_3_nome";
+                string surname = "prof_" + subject_id.ToString() + "_3_cognome";
+                Program.Subject_Button_Common(name, surname);
             }
         }
 
         private void Button4_Click(object sender, EventArgs e)
         {
-            if (button4.Text != "Nome Prof Non Impostato ")
+            if (button4.Text != "name Prof Non Impostato ")
             {
-                string nome = "prof_" + id_materia.ToString() + "_4_nome";
-                string cognome = "prof_" + id_materia.ToString() + "_4_cognome";
-                Program.Subject_Button_Common(nome, cognome);
+                string name = "prof_" + subject_id.ToString() + "_4_nome";
+                string surname = "prof_" + subject_id.ToString() + "_4_cognome";
+                Program.Subject_Button_Common(name, surname);
             }
         }
     }

@@ -115,7 +115,7 @@ namespace Webex_Launcher_Auto.Forms
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SubjectChoice";
             this.Text = "Assegna il prof alla materia";
-            this.Load += new System.EventHandler(this.SceltaMateria_Load);
+            this.Load += new System.EventHandler(this.SubjectChoice_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

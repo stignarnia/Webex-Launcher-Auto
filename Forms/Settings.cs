@@ -13,7 +13,7 @@ namespace Webex_Launcher_Auto.Forms
             CenterToScreen();
         }
 
-        private void Form3_Load(object sender, EventArgs e)
+        private void Settings_Load(object sender, EventArgs e)
         {
             label2.Text = Properties.Settings.Default["attesa"].ToString();
             trackBar1.Value = Int32.Parse(label2.Text);
@@ -99,9 +99,9 @@ namespace Webex_Launcher_Auto.Forms
 
         private void manualInsert_Click(object sender, EventArgs e)
         {
-            ManualSettings SelezioneManuale;
-            SelezioneManuale = new ManualSettings();
-            SelezioneManuale.ShowDialog();
+            ManualSettings ManualSelection;
+            ManualSelection = new ManualSettings();
+            ManualSelection.ShowDialog();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

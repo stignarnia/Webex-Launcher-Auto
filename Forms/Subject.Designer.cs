@@ -95,7 +95,7 @@ namespace Webex_Launcher_Auto.Forms
             this.MaximizeBox = false;
             this.Name = "Materia";
             this.Text = "Webex Launcher - Selezione Prof";
-            this.Load += new System.EventHandler(this.Form2_Load);
+            this.Load += new System.EventHandler(this.Subject_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
