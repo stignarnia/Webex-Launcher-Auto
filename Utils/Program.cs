@@ -40,17 +40,31 @@ namespace Webex_Launcher_Auto
             RegistryKey key;
 
             key = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall");
+            exePath = IsPathAvailable(key);
+            if(exePath == "")
+            {
+                key = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall");
+                exePath = IsPathAvailable(key);
+            }
+            
+            return exePath;
+        }
+
+        public static string IsPathAvailable(RegistryKey key)
+        {
+            string exePath;
 
             foreach (String keyName in key.GetSubKeyNames())
             {
                 RegistryKey subkey = key.OpenSubKey(keyName);
                 exePath = subkey.GetValue("InstallLocation") as string;
-                if (File.Exists(exePath + @"\" + Webex_Launcher_Auto.Properties.Settings.Default["browser"].ToString().ToLower() + ".exe"))
+                if (File.Exists(exePath + @"\" + Properties.Settings.Default["browser"].ToString().ToLower() + ".exe"))
                 {
-                    string path = exePath + @"\" + Webex_Launcher_Auto.Properties.Settings.Default["browser"].ToString().ToLower() + ".exe";
+                    string path = exePath + @"\" + Properties.Settings.Default["browser"].ToString().ToLower() + ".exe";
                     return path;
                 }
             }
+
             // NOT FOUND
             return "";
         }
@@ -76,7 +90,7 @@ namespace Webex_Launcher_Auto
             }
         }
 
-        public static void Materia_Button_Common(string nome, string cognome)
+        public static void Subject_Button_Common(string nome, string cognome)
         {
             int i, tries;
             string name, surname;
@@ -119,9 +133,9 @@ namespace Webex_Launcher_Auto
         public static bool Sync()
         {
             int i, j;
-            string[] subs, subs2, materie = new string[4], nomi = new string[4 * 4], cognomi = new string[4 * 4];
-            string pattern, materia, source, path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\schedule.html";
-            SceltaMateria SelezioneMateria;
+            string[] subs, subs2, subjects = new string[4], names = new string[4 * 4], surnames = new string[4 * 4];
+            string pattern, subject, source, path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\schedule.html";
+            SubjectChoice SubjectSelection;
 
             Task task = Task.Run(async () => await WAL_puppeteer.WAL_puppeteer.DownloadSchedule());
             task.Wait();
@@ -143,19 +157,19 @@ namespace Webex_Launcher_Auto
             for (i = 0; i < subs.Length && j < 4; i++)
             {
                 subs2 = Regex.Split(subs[i], pattern);
-                if (!subs2[0].Contains("-") && subs2[0] != "" && subs2[0] != " " && subs2[0] != "<!DOCTYPE" && !materie.Contains(subs2[0].Replace("</b>", "")))
+                if (!subs2[0].Contains("-") && subs2[0] != "" && subs2[0] != " " && subs2[0] != "<!DOCTYPE" && !subjects.Contains(subs2[0].Replace("</b>", "")))
                 {
-                    materie[j] = subs2[0];
-                    materia = "materia_" + (j + 1).ToString();
-                    Properties.Settings.Default[materia] = materie[j];
+                    subjects[j] = subs2[0];
+                    subject = "materia_" + (j + 1).ToString();
+                    Properties.Settings.Default[subject] = subjects[j];
                     j++;
                 }
             }
 
             while (j < 4)
             {
-                materia = "materia_" + (j + 1).ToString();
-                Properties.Settings.Default[materia] = "Materia Non Impostata";
+                subject = "materia_" + (j + 1).ToString();
+                Properties.Settings.Default[subject] = "Materia Non Impostata";
                 j++;
             }
 
@@ -164,8 +178,8 @@ namespace Webex_Launcher_Auto
             for (i = (subs.Length / 2 + 1), j = 0; i < subs.Length; i++, j++)
             {
                 string[] nameSurname = subs[i].Split('.');
-                nomi[j] = nameSurname[0];
-                cognomi[j] = nameSurname[1].Split('?')[0];
+                names[j] = nameSurname[0];
+                surnames[j] = nameSurname[1].Split('?')[0];
             }
 
             for (j = 1; j <= 4; j++)
@@ -179,12 +193,12 @@ namespace Webex_Launcher_Auto
                 }
             }
 
-            for (i = 0; i < cognomi.Length; i++)
+            for (i = 0; i < surnames.Length; i++)
             {
-                if (cognomi[i] != null)
+                if (surnames[i] != null)
                 {
-                    SelezioneMateria = new SceltaMateria(nomi[i], cognomi[i]);
-                    SelezioneMateria.ShowDialog();
+                    SubjectSelection = new SubjectChoice(names[i], surnames[i]);
+                    SubjectSelection.ShowDialog();
                 }
             }
 

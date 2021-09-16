@@ -99,7 +99,7 @@ namespace Webex_Launcher_Auto.Forms
             this.Impostazioni.Location = new System.Drawing.Point(1059, 703);
             this.Impostazioni.Name = "Impostazioni";
             this.Impostazioni.Size = new System.Drawing.Size(414, 60);
-            this.Impostazioni.TabIndex = 6;
+            this.Impostazioni.TabIndex = 4;
             this.Impostazioni.Text = "Impostazioni";
             this.Impostazioni.UseVisualStyleBackColor = true;
             this.Impostazioni.Click += new System.EventHandler(this.Impostazioni_Click);

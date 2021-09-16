@@ -164,5 +164,10 @@ namespace Webex_Launcher_Auto.Forms
         {
             Process.Start("https://github.com/stignarnia/Webex-Launcher-Auto/wiki/Regole-di-sintassi");
         }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -36,12 +36,13 @@ namespace Updater
         public static void DoUpdate()
         {
             WebClient webClient = new WebClient();
+            string dir = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\webexlauncher\updateinstaller";
+            System.IO.Directory.CreateDirectory(dir);
 
             try
             {
-                System.IO.Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\webexlauncher\updateinstaller");
-                webClient.DownloadFile("https://github.com/stignarnia/webex-launcher-auto/releases/latest/download/Webex-Auto-Launcher-Win64-Setup.msi", Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\webexlauncher\updateinstaller\Webex-Auto-Launcher-Win64-Setup.msi");
-                Process.Start(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\webexlauncher\updateinstaller\Webex-Auto-Launcher-Win64-Setup.msi");
+                webClient.DownloadFile("https://github.com/stignarnia/webex-launcher-auto/releases/latest/download/Webex-Auto-Launcher-Win64-Setup.msi", dir + @"\Webex-Auto-Launcher-Win64-Setup.msi");
+                Process.Start(dir + @"\Webex-Auto-Launcher-Win64-Setup.msi");
                 Environment.Exit(0);
             }
             catch

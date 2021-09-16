@@ -4,11 +4,11 @@ using System.Windows.Forms;
 
 namespace Webex_Launcher_Auto.Forms
 {
-    public partial class Materia : Form
+    public partial class Subject : Form
     {
         public int id_materia;
 
-        public Materia(int materia)
+        public Subject(int materia)
         {
             InitializeComponent();
             CenterToScreen();
@@ -33,7 +33,7 @@ namespace Webex_Launcher_Auto.Forms
             {
                 string nome = "prof_" + id_materia.ToString() + "_1_nome";
                 string cognome = "prof_" + id_materia.ToString() + "_1_cognome";
-                Program.Materia_Button_Common(nome, cognome);
+                Program.Subject_Button_Common(nome, cognome);
             }
         }
 
@@ -43,7 +43,7 @@ namespace Webex_Launcher_Auto.Forms
             {
                 string nome = "prof_" + id_materia.ToString() + "_2_nome";
                 string cognome = "prof_" + id_materia.ToString() + "_2_cognome";
-                Program.Materia_Button_Common(nome, cognome);
+                Program.Subject_Button_Common(nome, cognome);
             }
         }
 
@@ -53,7 +53,7 @@ namespace Webex_Launcher_Auto.Forms
             {
                 string nome = "prof_" + id_materia.ToString() + "_3_nome";
                 string cognome = "prof_" + id_materia.ToString() + "_3_cognome";
-                Program.Materia_Button_Common(nome, cognome);
+                Program.Subject_Button_Common(nome, cognome);
             }
         }
 
@@ -63,7 +63,7 @@ namespace Webex_Launcher_Auto.Forms
             {
                 string nome = "prof_" + id_materia.ToString() + "_4_nome";
                 string cognome = "prof_" + id_materia.ToString() + "_4_cognome";
-                Program.Materia_Button_Common(nome, cognome);
+                Program.Subject_Button_Common(nome, cognome);
             }
         }
     }

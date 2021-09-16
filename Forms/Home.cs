@@ -91,8 +91,8 @@ namespace Webex_Launcher_Auto.Forms
         {
             if (button1.Text != "Materia Non Impostata")
             {
-                Materia SelezioneProf;
-                SelezioneProf = new Materia(1);
+                Subject SelezioneProf;
+                SelezioneProf = new Subject(1);
                 SelezioneProf.ShowDialog();
             }
         }
@@ -101,8 +101,8 @@ namespace Webex_Launcher_Auto.Forms
         {
             if (button2.Text != "Materia Non Impostata")
             {
-                Materia SelezioneProf;
-                SelezioneProf = new Materia(2);
+                Subject SelezioneProf;
+                SelezioneProf = new Subject(2);
                 SelezioneProf.ShowDialog();
             }
         }
@@ -111,8 +111,8 @@ namespace Webex_Launcher_Auto.Forms
         {
             if (button3.Text != "Materia Non Impostata")
             {
-                Materia SelezioneProf;
-                SelezioneProf = new Materia(3);
+                Subject SelezioneProf;
+                SelezioneProf = new Subject(3);
                 SelezioneProf.ShowDialog();
             }
         }
@@ -121,8 +121,8 @@ namespace Webex_Launcher_Auto.Forms
         {
             if (button4.Text != "Materia Non Impostata")
             {
-                Materia SelezioneProf;
-                SelezioneProf = new Materia(4);
+                Subject SelezioneProf;
+                SelezioneProf = new Subject(4);
                 SelezioneProf.ShowDialog();
             }
         }
