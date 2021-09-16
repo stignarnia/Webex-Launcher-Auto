@@ -6,11 +6,12 @@ Durante il semestre bisogna entrare sempre nelle stesse stanze, impostale una vo
 
 ## Utilizzo
 * Scarica il programma dalla pagina [**releases**](https://github.com/stignarnia/Webex-Launcher-Auto/releases);
-* Estrai la cartella compressa dove preferisci, individua il file `.exe` (infatti funziona solo per Windows) e, se vuoi, fai "Tasto destro > Invia a > Desktop (crea collegamento)", in modo da poter spostare la cartella dove preferisci;
+* Installalo facendo doppio click sul file;
 * Dai un'occhiata alla [**wiki**](https://github.com/stignarnia/Webex-Launcher-Auto/wiki), dove troverai i **prerequisiti** e anche le istruzioni per compilare il programma in autonomia, ad esempio se ti dovesse servire a 32 bit.
 
 ## Bug conosciuti  
 * Quando viene importato l'orario, nel caso la materia abbia più di un modulo, il programma tenterà di assegnare gli stessi prof due volte, in quel caso basta premere la X quando hai già risposto alla stessa domanda prima. 
+* Non funziona selezionando Firefox nelle impostazioni.
 
 ## Esempi
 ![image](https://user-images.githubusercontent.com/80171209/117535303-79307800-aff5-11eb-945f-e42621cd3af2.png)
