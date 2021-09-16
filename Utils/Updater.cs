@@ -1,6 +1,8 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 using System.Net;
 using System.Reflection;
+using System.Windows.Forms;
 
 namespace Updater
 {
@@ -13,32 +15,38 @@ namespace Updater
             FileVersionInfo fileVersionInfo = FileVersionInfo.GetVersionInfo(assembly.Location);
             string version = fileVersionInfo.ProductVersion.Substring(0, 3);
 
-            /*try
-            {*/
-            string latest = webClient.DownloadString("https://github.com/stignarnia/webex-launcher-auto/releases/latest/");
-            /*if (!latest.Contains(version))
-            {*/
-                DoUpdate();
-            /*}*/
-            /*}
+            try
+            {
+                string latest = webClient.DownloadString("https://github.com/stignarnia/webex-launcher-auto/releases/latest/");
+                if (!latest.Contains(version))
+                {
+                    if (MessageBox.Show("È disponibile un nuovo aggiornamento, vuoi installarlo adesso?",
+                        "Aggiornamento disponibile", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                    {
+                        DoUpdate();
+                    }
+                }
+            }
             catch
             {
                 ;
-            }*/
+            }
         }
 
         public static void DoUpdate()
         {
             WebClient webClient = new WebClient();
 
-            /*try
+            try
             {
-            webClient.DownloadFile("https://github.com/stignarnia/webex-launcher-auto/releases/latest/download/Webex-Auto-Launcher-Win64.zip", "Webex-Auto-Launcher-Win64.zip");
+                webClient.DownloadFile("https://github.com/stignarnia/webex-launcher-auto/releases/latest/download/Webex-Auto-Launcher-Win64-Setup.msi", "Webex-Auto-Launcher-Win64-Setup.msi");
+                Process.Start("Webex-Auto-Launcher-Win64-Setup.msi");
+                Environment.Exit(0);
             }
             catch
             {
                 ;
-            }*/
+            }
         }
     }
 }
