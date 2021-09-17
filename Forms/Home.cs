@@ -37,7 +37,7 @@ namespace Webex_Launcher_Auto.Forms
                 if (MessageBox.Show("Il programma non è ancora configurato, lascia che ti apra le impostazioni",
                     "Benvenuto", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.Cancel)
                 {
-                    Application.Exit();
+                    Environment.Exit(0);
                 }
                 else
                 {
