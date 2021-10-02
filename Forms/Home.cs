@@ -57,10 +57,9 @@ namespace Webex_Launcher_Auto.Forms
                 }
             }
 
-            int webexStatus = Program.Is_Webex_Open();
-            if (webexStatus == 1 || webexStatus == 2)
+            if (Program.Is_Webex_Open())
             {
-                if (MessageBox.Show("Webex è già aperto (magari solo in background), continuando verrà chiuso",
+                if (MessageBox.Show("Webex è già aperto in primo piano, continuando verrà chiuso",
                 "Attenzione", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.Cancel)
                 {
                     Environment.Exit(0);

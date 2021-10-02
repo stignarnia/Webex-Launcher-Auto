@@ -69,13 +69,13 @@ namespace Webex_Launcher_Auto
             return "";
         }
 
-        public static int Is_Webex_Open()
+        public static bool Is_Webex_Open()
         {
             Process[] procs = Process.GetProcessesByName("atmgr");
 
             if (procs.Length == 0)
             {
-                return 0;
+                return false;
             }
             else
             {
@@ -83,10 +83,10 @@ namespace Webex_Launcher_Auto
                 {
                     if (p.MainWindowTitle.Length > 0)
                     {
-                        return 2;
+                        return true;
                     }
                 }
-                return 1;
+                return false;
             }
         }
 
@@ -109,9 +109,10 @@ namespace Webex_Launcher_Auto
 
         public static void Subject_Button_Common(string nome, string cognome)
         {
-            int i, tries;
+            int i, tries, ms;
             string name, surname;
             tries = Int32.Parse(Properties.Settings.Default["attesa"].ToString()) * 4;
+            ms = tries * 50;
 
             name = Properties.Settings.Default[nome].ToString();
             surname = Properties.Settings.Default[cognome].ToString();
@@ -119,8 +120,9 @@ namespace Webex_Launcher_Auto
 
             for (i = 0; i < tries; i++)
             {
-                if (Is_Webex_Open() == 2)
+                if (Is_Webex_Open())
                 {
+                    Thread.Sleep(ms);
                     SendKeys.SendWait("%{Tab}");
                     Thread.Sleep(500);
                     SendKeys.SendWait("^(w)");
