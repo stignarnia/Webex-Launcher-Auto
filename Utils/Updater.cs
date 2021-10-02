@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.IO;
 using System.Net;
 using System.Reflection;
 using System.Windows.Forms;
@@ -13,7 +14,7 @@ namespace Updater
             WebClient webClient = new WebClient();
             Assembly assembly = Assembly.GetExecutingAssembly();
             FileVersionInfo fileVersionInfo = FileVersionInfo.GetVersionInfo(assembly.Location);
-            string version = fileVersionInfo.ProductVersion.Substring(0, 3);
+            string version = fileVersionInfo.ProductVersion.Substring(0, 4);
 
             try
             {
@@ -37,7 +38,7 @@ namespace Updater
         {
             WebClient webClient = new WebClient();
             string dir = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\webexlauncher\updateinstaller";
-            System.IO.Directory.CreateDirectory(dir);
+            Directory.CreateDirectory(dir);
 
             try
             {
