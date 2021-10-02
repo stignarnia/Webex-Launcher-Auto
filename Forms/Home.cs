@@ -1,6 +1,4 @@
 using System;
-using System.Diagnostics;
-using System.Threading;
 using System.Windows.Forms;
 
 namespace Webex_Launcher_Auto.Forms
@@ -59,8 +57,8 @@ namespace Webex_Launcher_Auto.Forms
                 }
             }
 
-            Process[] procs = Process.GetProcessesByName("atmgr");
-            if (procs.Length != 0)
+            int webexStatus = Program.Is_Webex_Open();
+            if (webexStatus == 1 || webexStatus == 2)
             {
                 if (MessageBox.Show("Webex è già aperto (magari solo in background), continuando verrà chiuso",
                 "Attenzione", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.Cancel)
@@ -69,20 +67,8 @@ namespace Webex_Launcher_Auto.Forms
                 }
                 else
                 {
-                    try
-                    {
-                        Process[] procs2 = Process.GetProcessesByName("ciscowebexstart");
-                        foreach (Process p in procs2)
-                        {
-                            p.Kill();
-                        }
-                        foreach (Process p in procs)
-                        {
-                            p.Kill();
-                            Thread.Sleep(250);
-                        }
-                    }
-                    catch { }
+                    Program.Terminate("atmgr");
+                    Program.Terminate("ciscowebexstart");
                 }
             }
         }

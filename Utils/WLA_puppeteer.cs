@@ -4,11 +4,11 @@ using System.Threading.Tasks;
 using Webex_Launcher_Auto;
 using PuppeteerSharp;
 
-namespace WAL_puppeteer
+namespace WLA_puppeteer
 {
-    public partial class WAL_puppeteer
+    public partial class WLA_puppeteer
     {
-        public static async Task DownloadSchedule()
+        public static async Task DownloadScheduleChromium()
         {
             int i;
             string path = Program.IsBrowserInstalled();
@@ -43,7 +43,6 @@ namespace WAL_puppeteer
                 }
             }
             await browser.CloseAsync();
-            return;
         }
     }
 }

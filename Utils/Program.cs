@@ -69,13 +69,13 @@ namespace Webex_Launcher_Auto
             return "";
         }
 
-        public static bool Is_Webex_Open()
+        public static int Is_Webex_Open()
         {
             Process[] procs = Process.GetProcessesByName("atmgr");
 
             if (procs.Length == 0)
             {
-                return false;
+                return 0;
             }
             else
             {
@@ -83,10 +83,27 @@ namespace Webex_Launcher_Auto
                 {
                     if (p.MainWindowTitle.Length > 0)
                     {
-                        return true;
+                        return 2;
                     }
                 }
-                return false;
+                return 1;
+            }
+        }
+
+        public static void Terminate (string program)
+        {
+            try
+            {
+                Process[] procs = Process.GetProcessesByName(program);
+                foreach (Process p in procs)
+                {
+                    p.Kill();
+                    Thread.Sleep(250);
+                }
+            }
+            catch
+            {
+                ;
             }
         }
 
@@ -102,7 +119,7 @@ namespace Webex_Launcher_Auto
 
             for (i = 0; i < tries; i++)
             {
-                if (Is_Webex_Open())
+                if (Is_Webex_Open() == 2)
                 {
                     SendKeys.SendWait("%{Tab}");
                     Thread.Sleep(500);
@@ -137,8 +154,16 @@ namespace Webex_Launcher_Auto
             string pattern, subject, source, path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\schedule.html";
             SubjectChoice SubjectSelection;
 
-            Task task = Task.Run(async () => await WAL_puppeteer.WAL_puppeteer.DownloadSchedule());
-            task.Wait();
+            if (Properties.Settings.Default["browser"].ToString() == "Firefox")
+            {
+                WLA_selenium.WLA_selenium.DownloadScheduleGecko();
+            }
+            else
+            {
+                Task task = Task.Run(async () => await WLA_puppeteer.WLA_puppeteer.DownloadScheduleChromium());
+                task.Wait();
+            }
+            
 
             if (File.Exists(path))
             {
