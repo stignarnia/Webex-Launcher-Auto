@@ -1,4 +1,8 @@
-# Webex-Launcher-Auto
+# Webex-Launcher-Auto (deprecato)
+
+## La nuova app di Webex include la cronologia delle chiamate
+
+![Immagine 2022-04-10 113011](https://user-images.githubusercontent.com/80171209/162611912-71f5e56e-767f-4e12-8d5e-749ecc73e3a2.png)
 
 ## Entra nelle stanze Webex con un click
 
